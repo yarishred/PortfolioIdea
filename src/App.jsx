@@ -1,11 +1,13 @@
-import { useState } from 'react'
 import { AboutUs } from './pages/AboutUs'
 
+//Global Styles (Styled Components)
+import { GlobalStyle } from './components/GlobalStyle'
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <GlobalStyle/>
       <AboutUs/>
     </div>
   )
