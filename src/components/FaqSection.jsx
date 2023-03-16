@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Faq } from '../styles'
 
 export const FaqSection = () => {
+    const [faqToggle, setFaqToggle] = useState(false)
   return (
     <Faq>
         <h2>Any Questions <span>FAQ</span></h2>
-        <div className="question">
+        <div  className="question">
             <h4>How Do I Start?</h4>
             <div className="answer">
                 <p>Lorem ipsum dolor sit amet.</p>
