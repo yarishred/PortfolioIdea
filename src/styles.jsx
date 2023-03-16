@@ -9,9 +9,11 @@ export const About = styled.div`
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
+  overflow:hidden ;
 `;
 
 export const Description = styled.div`
+  z-index: 2;
   flex: 1;
   padding-right: 5rem;
   h2 {
@@ -21,6 +23,7 @@ export const Description = styled.div`
 
 export const Image = styled.div`
   flex: 1;
+  z-index: 2;
   overflow: hidden;
   img {
     width: 100%;
@@ -137,37 +140,43 @@ export const Awards = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
-`
+`;
 
 export const StyledAward = styled.div`
   padding: 5rem;
-  h3{
+  h3 {
     font-size: 2rem;
   }
-  .line{
+  .line {
     width: 100%;
     background: #23d997;
     height: 0.05rem;
     margin: 1rem 0rem;
   }
-  p{
+  p {
     padding: 2rem 0rem;
   }
-`
+`;
 
 export const ImageDisplay = styled.div`
   min-height: 50vh;
-  p{
+  p {
     text-align: center;
     padding: 8rem;
   }
-  img{
+  img {
     width: 100%;
     height: 50vh;
     object-fit: cover;
   }
-`
+`;
+
+export const WaveSVG = styled.svg`
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  scale: 1.1;
+`;
 
 //Nested Styled Components
 export const Services = styled(About)`
@@ -189,7 +198,7 @@ export const Faq = styled(About)`
     padding-bottom: 2rem;
     font-weight: lighter;
   }
-  img{
+  img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
