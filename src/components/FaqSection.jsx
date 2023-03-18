@@ -1,45 +1,59 @@
-import React, { useState } from 'react'
-import { Faq } from '../styles'
+import React from "react";
+import { Faq } from "../styles";
+import { Toggle } from "./reusableComponents/Toggle";
+
+//Framer Motion
+import { LayoutGroup } from "framer-motion";
 
 export const FaqSection = () => {
-    const [faqToggle, setFaqToggle] = useState(false)
   return (
     <Faq>
-        <h2>Any Questions <span>FAQ</span></h2>
-        <div  className="question">
-            <h4>How Do I Start?</h4>
-            <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ullam inventore laborum illo vero, adipisci ea nam alias tenetur molestias?</p>
-            </div>
-            <div className="faq-line"></div>
-        </div>
-        <div className="question">
-            <h4>Daily Schedule</h4>
-            <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ullam inventore laborum illo vero, adipisci ea nam alias tenetur molestias?</p>
-            </div>
-            <div className="faq-line"></div>
-        </div>
-        <div className="question">
-            <h4>Different Payment Methods?</h4>
-            <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ullam inventore laborum illo vero, adipisci ea nam alias tenetur molestias?</p>
-            </div>
-            <div className="faq-line"></div>
-
-        </div>
-        <div className="question">
-            <h4>What Products Do You Offer?</h4>
-            <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ullam inventore laborum illo vero, adipisci ea nam alias tenetur molestias?</p>
-            </div>
-            <div className="faq-line"></div>
-
-        </div>
+      <h2>
+        Any Questions <span>FAQ</span>
+      </h2>
+      <LayoutGroup>
+        <Toggle title="How Do I Start?">
+          <h4></h4>
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus ullam inventore laborum illo vero, adipisci ea nam
+              alias tenetur molestias?
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Daily Schedule">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus ullam inventore laborum illo vero, adipisci ea nam
+              alias tenetur molestias?
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Different Payment Methods?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus ullam inventore laborum illo vero, adipisci ea nam
+              alias tenetur molestias?
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="What Products Do You Offer?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus ullam inventore laborum illo vero, adipisci ea nam
+              alias tenetur molestias?
+            </p>
+          </div>
+        </Toggle>
+      </LayoutGroup>
     </Faq>
-  )
-}
+  );
+};

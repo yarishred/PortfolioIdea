@@ -1,11 +1,26 @@
 import React from "react";
-import { StyledOurWork, Movie } from "../styles";
+import {
+  StyledOurWork,
+  Movie,
+  Hide,
+  Frame1,
+  Frame2,
+  Frame3,
+  Frame4,
+} from "../styles";
 
 //Import React Router Dom
 import { NavLink } from "react-router-dom";
 
 //Import Framer Motion
-import { pageAnimation } from "../animation/animation";
+import { motion } from "framer-motion";
+import {
+  pageAnimation,
+  fade,
+  photoAnimation,
+  lineAnim,
+  slider,
+} from "../animation/animation";
 
 //Images
 import athlete from "../img/athlete-small.png";
@@ -20,13 +35,22 @@ export const OurWork = () => {
       animate="show"
       exit="exit"
       style={{ background: "#fff" }}
-
-     >
+    >
+      <Frame1 variants={slider}></Frame1>
+      <Frame2 variants={slider}></Frame2>
+      <Frame3 variants={slider}></Frame3>
+      <Frame4 variants={slider}></Frame4>
       <Movie>
-        <h2>The Athlete</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <NavLink to="/work/the-athlete">
-          <img src={athlete} alt="The Athlete" />
+          <Hide>
+            <motion.img
+              variants={photoAnimation}
+              src={athlete}
+              alt="The Athlete"
+            />
+          </Hide>
         </NavLink>
       </Movie>
       <Movie>

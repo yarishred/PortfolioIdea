@@ -32,7 +32,7 @@ export const Image = styled.div`
   }
 `;
 
-export const Hide = styled.div`
+export const Hidden = styled.div`
   overflow: hidden;
 `;
 
@@ -60,7 +60,7 @@ export const Card = styled.div`
 `;
 
 export const StyledNav = styled.nav`
-  min-height: 8vh;
+  min-height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +103,7 @@ export const Movie = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background: #cccccc;
+    background: #23d997;
     margin-bottom: 3rem;
   }
   img {
@@ -177,6 +177,30 @@ export const WaveSVG = styled.svg`
   z-index: 1;
   scale: 1.1;
 `;
+
+export const Hide = styled.div`
+  overflow: hidden;
+`
+
+//Frame Animation
+export const Frame1  = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top:10%;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+`
+export const Frame2 = styled(Frame1)`
+  background: #ff8efb;
+`
+export const Frame3 = styled(Frame1)`
+  background: #8ed2ff;
+`
+export const Frame4 = styled(Frame1)`
+  background: #8eff80;
+`
 
 //Nested Styled Components
 export const Services = styled(About)`
